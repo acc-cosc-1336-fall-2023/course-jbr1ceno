@@ -11,3 +11,4 @@ if(result):
 else:
     print("Not overtime")
 
+decisions.run_menu()
