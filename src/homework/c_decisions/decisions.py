@@ -22,6 +22,6 @@ def get_faculty_rating(ratio):
         rating_statement = "Unacceptable"
     
     else:
-        rating_statement = "Non Existant"
+        rating_statement = "Non Existent"
     
     return rating_statement
