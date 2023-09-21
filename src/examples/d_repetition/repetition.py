@@ -93,3 +93,18 @@ def while_validate_user_input():
 
         else:
             print("Lot number must be numeric, try again. ")
+
+def nested_while_loop(row, col):
+    i = 0
+
+    while(i < row):
+        print("i: ",i, "outer loop-wait for inner loop")
+        i += 1
+        j = 0
+       
+
+        while(j < col):
+            print("j: ",j, "\t inner loop")
+            j += 1
+        
+        print("inner loop complete")
