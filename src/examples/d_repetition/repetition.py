@@ -108,3 +108,18 @@ def nested_while_loop(row, col):
             j += 1
         
         print("inner loop complete")
+
+
+#Practice from Quiz
+'''def to_number_for(i):
+    for i in range(3):
+        print(i)
+
+def num_and_sum_while(num, sum):
+    num = 3
+    sum = 0
+    while(num > 0):
+        sum += num
+        num -= 1
+    
+    print("Num is: ", num, ", and sum is:", sum)'''
