@@ -6,7 +6,10 @@ def get_factorial(num):
         return num * get_factorial(num - 1)
     
 #while loop
-'''def sum_odd_numbers(num):
-    while(num > 0 and num * 2):
-
-        return num'''
+def sum_odd_numbers(num):
+    sum = 0
+    cnt = 1
+    while(cnt <= num ):
+        sum += cnt
+        cnt += 2
+    return sum
