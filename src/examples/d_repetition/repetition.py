@@ -123,3 +123,12 @@ def num_and_sum_while(num, sum):
         num -= 1
     
     print("Num is: ", num, ", and sum is:", sum)'''
+
+def nested_for_loop(row, col):
+
+    for i in range(row):
+        print("i: ", i , "outer loop")
+        for j in range(col):
+            print("j", j, "inner loop")
+        
+        print("inner loop complete")
