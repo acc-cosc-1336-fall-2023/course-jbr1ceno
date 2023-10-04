@@ -35,5 +35,3 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(search_in_string(str1, str2), True)
         self.assertEqual(search_in_string("efg", str2), False)
-
-        
