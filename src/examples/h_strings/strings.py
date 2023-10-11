@@ -5,7 +5,7 @@ def loop_string_w_while(str):
     indx = 0
 
     while indx < len(str):
-       print(str[indx])
+       print(indx, indx, " < ", len(str), str[indx])
        indx += 1 
 
 def loop_string_w_for(str):
