@@ -7,4 +7,7 @@ import lists
 #lists.display_reverse_list_w_while()
 #lists.display_list_w_for_range()
 #lists.display_list_w_for_range_w_step()
-lists.display_reverse_list_w_for_range()
+#lists.display_reverse_list_w_for_range()
+
+list1 = [5, 10, 20]
+print(id(list1))

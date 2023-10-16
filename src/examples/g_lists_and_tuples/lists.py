@@ -40,3 +40,26 @@ def display_reverse_list_w_for_range():
 
     for i in range(len(list1), 0, -1):
         print(list1[i-1])
+
+def get_list_total_while(list1):
+    indx = 0
+    sum = 0
+
+    while(indx < len(list1)):
+        sum += list1[indx]
+        indx += 1
+    
+    return sum
+
+def get_list_total_for(list1):
+    sum = 0
+
+    for i in range(0, len(list1)):
+        sum += list1[i]
+
+    return sum
+
+def list_ref_param(list1): #passing a parameter
+    print(list1)
+    list1[0] = 0
+
