@@ -63,3 +63,8 @@ def list_ref_param(list1): #passing a parameter
     print(list1)
     list1[0] = 0
 
+def get_list_return_value(list1): #returning a parameter
+    print(list1)
+    list1[0] = 0
+
+    return list1
