@@ -102,3 +102,12 @@ class Test_Config(unittest.TestCase):
         print(list1)
 
         self.assertEqual(list1[2] == 5, True)
+
+    def test_del_list_item(self):
+        list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        print(id(list))
+        del list[2]
+        print(id(list))
+
+        self.assertEqual(list == [1, 2, 4, 5, 6, 7, 8, 9, 10], True)
+        print(list)
