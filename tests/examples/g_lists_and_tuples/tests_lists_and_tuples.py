@@ -90,3 +90,15 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(list1[0] == list2[0], False)
         self.assertEqual(list1[0] == 0, True)
         self.assertEqual(list2[0] == 1, True)
+
+    def test_list_find_item_at_index(self):
+        list1 = [1, 2, 3, 4]
+
+        self.assertEqual(list1.index(2), 1)
+
+    def test_insert_item_at_index(self):
+        list1 = [1, 2, 3, 4]
+        list1.insert(2, 5)
+        print(list1)
+
+        self.assertEqual(list1[2] == 5, True)
