@@ -69,4 +69,6 @@ def get_list_return_value(list1): #returning a parameter
 
     return list1
 
-    
+#section 7.4 in book
+def search_for_item_in_list(item, list1):
+    return item in list1

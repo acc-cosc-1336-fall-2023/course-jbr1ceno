@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import get_list_return_value, get_list_total_for, get_list_total_while, list_ref_param, test_config
+from src.examples.g_lists_and_tuples.lists import get_list_return_value, get_list_total_for, get_list_total_while, list_ref_param, search_for_item_in_list, test_config
 
 class Test_Config(unittest.TestCase):
 
@@ -48,3 +48,9 @@ class Test_Config(unittest.TestCase):
         list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
         self.assertEqual(list[-5:], [6, 7, 8, 9, 10])
+
+    def test_item_in_list(self):
+        prod_nums = ['V475', 'F987', 'Q143', 'R688']
+
+        self.assertEqual(search_for_item_in_list('F987', prod_nums), True)
+        self.assertEqual(search_for_item_in_list('G999', prod_nums), False)
