@@ -54,3 +54,39 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(search_for_item_in_list('F987', prod_nums), True)
         self.assertEqual(search_for_item_in_list('G999', prod_nums), False)
+
+    def test_list_copy_doesnt_create_another_lists(self):
+        list1 = [1, 2, 3, 4]
+        list2 = list1
+
+        list2[0] = 0
+
+        self.assertEqual(list1 == list2, True)
+        self.assertEqual(list1[0] == list2[0], True)
+        self.assertEqual(list1[0] == 0, True)
+        self.assertEqual(list2[0] == 0, True)
+
+    def test_list_create_list_from_existing_list(self):
+        list1 = [1, 2, 3, 4]
+        list2 = []#empty list
+
+        for i in range(0, len(list1)):
+            list2.append(list1[i])
+
+        self.assertEqual(list1 == list2, True)
+
+        list1[0] = 0
+
+        self.assertEqual(list1[0] == list2[0], False)
+        self.assertEqual(list1[0] == 0, True)
+        self.assertEqual(list2[0] == 1, True)
+
+    def test_create_list_from_existing_list_conc(self):
+        list1 = [1, 2, 3, 4]
+        list2 = [] + [1, 2, 3, 4]
+
+        list1[0] = 0
+
+        self.assertEqual(list1[0] == list2[0], False)
+        self.assertEqual(list1[0] == 0, True)
+        self.assertEqual(list2[0] == 1, True)
