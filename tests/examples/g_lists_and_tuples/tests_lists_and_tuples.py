@@ -111,3 +111,14 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(list == [1, 2, 4, 5, 6, 7, 8, 9, 10], True)
         print(list)
+
+    def test_get_max_from_list(self):
+        list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        self.assertEqual(max(list), 10)
+
+    def test_get_min_from_list(self):
+        list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        self.assertEqual(min(list), 1)
+
