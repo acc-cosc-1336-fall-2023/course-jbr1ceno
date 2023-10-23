@@ -1,21 +1,16 @@
+import dictionaries
+
 #main program
 phonebook = {'Chris': '555-1111', 'Katie': '555-2222', 'Joanne':'555-3333'}
-#print(phonebook)
 
-#print(phonebook['Chris'])
-#print(phonebook['Katie'])
+exists = dictionaries.is_key_in_dictionary('Chris', phonebook)
 
-for key in phonebook:               #key AKA formal name: target variable
-    print(key, phonebook[key])      #shows key with its values
-    print(phonebook[key])           #shows just the values of the keys
-    
-print("values only")
-for value in phonebook.values():    #.values() is a built in function in the dictionaries for python
-    print(value)                    #only shows the values of the keys
+print(exists)
 
-print("dictionary items")
-for item in phonebook.items():      #.items() is a built in function
-    print(item)                     #tuple
+for key, value in phonebook.items():
+    print(key, value)
 
+for name, number in phonebook.items():
+    print(name, number)
 
 
