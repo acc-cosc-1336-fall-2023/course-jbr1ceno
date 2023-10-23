@@ -1,16 +1,17 @@
 import dictionaries
 
 #main program
-phonebook = {'Chris': '555-1111', 'Katie': '555-2222', 'Joanne':'555-3333'}
+phonebook = {}#empty dictionary
 
-exists = dictionaries.is_key_in_dictionary('Chris', phonebook)
+key = input("Enter key: ")
+value = input("Enter value: ")
 
-print(exists)
+phonebook[key] = value
 
-for key, value in phonebook.items():
-    print(key, value)
+print(phonebook[key])
 
-for name, number in phonebook.items():
-    print(name, number)
+del phonebook[key] #deleting a dictionary
+
+print(phonebook)
 
 
