@@ -1,23 +1,14 @@
 import dictionaries
-
+import sets
 #main program
-phonebook = {}#empty dictionary
+#a set is not an ordered list, meaning there is no order in the list, or random order
+myset = set('abc')
 
-print('Add friends\n')
-dictionaries.add_friend_phonebook('Chris', '555-1111', phonebook)
-dictionaries.add_friend_phonebook('Katie', '555-2222', phonebook)
+print(myset)
 
-for name, value in phonebook.items():
-    print(name, value)
+myset.add('d')
 
-print('\n Update katie')
-dictionaries.add_friend_phonebook('Katie', '555-2345', phonebook)
+print(myset)
 
-for name, value in phonebook.items():
-    print(name, value)
-
-print('\nDelete Chris \n')
-dictionaries.delete_friend_phonebook('Chris', phonebook)
-
-for name, value in phonebook.items():
-    print(name, value)
+for item in myset:
+    print(item)
