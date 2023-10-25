@@ -16,4 +16,3 @@ def delete_friend_phonebook(name, phonebook):
     
     if name in phonebook:
         del phonebook[name]
-

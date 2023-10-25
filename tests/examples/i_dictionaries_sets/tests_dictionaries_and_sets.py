@@ -36,4 +36,5 @@ class Test_Config(unittest.TestCase):
 
         delete_friend_phonebook('Kati', phonebook)
         self.assertEqual(phonebook, {'Katie':'555-2222', 'Joanne':'555-3333'})
+    
 

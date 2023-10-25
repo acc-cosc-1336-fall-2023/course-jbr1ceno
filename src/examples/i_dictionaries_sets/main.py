@@ -3,16 +3,21 @@ import dictionaries
 #main program
 phonebook = {}#empty dictionary
 
-key = input("Enter key: ")
-value = input("Enter value: ")
+print('Add friends\n')
+dictionaries.add_friend_phonebook('Chris', '555-1111', phonebook)
+dictionaries.add_friend_phonebook('Katie', '555-2222', phonebook)
 
-phonebook[key] = value
+for name, value in phonebook.items():
+    print(name, value)
 
-print(phonebook)
+print('\n Update katie')
+dictionaries.add_friend_phonebook('Katie', '555-2345', phonebook)
 
-key = input("Enter key: ")
-value = input("Enter value: ")
+for name, value in phonebook.items():
+    print(name, value)
 
-phonebook[key] = value
+print('\nDelete Chris \n')
+dictionaries.delete_friend_phonebook('Chris', phonebook)
 
-print(phonebook)
+for name, value in phonebook.items():
+    print(name, value)
