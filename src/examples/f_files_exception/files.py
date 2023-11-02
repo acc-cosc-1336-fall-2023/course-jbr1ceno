@@ -60,34 +60,64 @@ def read_from_file_while(file_name):
 
 def read_from_file_for(file_name):
     in_file = open(file_name, 'r')
-
+    
     for line in in_file:
         print(line.rstrip('\n'))
-
+        
     in_file.close()
 
 def write_sales_data(file_name, file_mode):
     out_file = open(file_name, file_mode)
-
     user_choice = 'y'
 
     while(user_choice.upper() == 'Y'):
         amount = input("Enter sales data: ")
         out_file.write(amount + '\n')
-        user_choice = input("Type y to continue... ")
+        user_choice = input("Type y to continue...")
 
     out_file.close()
-
-def read_sales_data(file_name): #FIX THIS LATER
+    
+def read_sales_data(file_name): #FIX THIS CODE
     in_file = open(file_name, 'r')
-
     total_sales = 0
-
+    
     for amount in in_file:
         print(f'{float(amount):.2f}')
         total_sales += float(amount)
-    
+
     print('-------')
     print(f'{total_sales:.2f}')
 
     in_file.close()
+
+def write_field_data(file_name, file_mode):
+    out_file = open(file_name, file_mode)
+
+    user_choice = 'Y'
+
+    while(user_choice.upper() == 'Y'):
+        name = input("Enter name: ")
+        dept_id = input("Enter dept id: ")
+        lang = input("Enter prog lang: ")
+
+        out_file.write(name + ',' + dept_id + ',' + lang + '\n')
+        user_choice = input("Enter y to continue... ")
+
+    out_file.close()
+
+def read_field_data(file_name):
+    in_file = open(file_name, 'r')
+
+    name = ''
+    dept_id = ''
+    lang = ''
+
+    for line in in_file:
+        fields = line.rstrip('\n').split(',')
+        name = fields[0]
+        dept_id = fields[1]
+        lang = fields[2]
+
+        print(name, dept_id, lang)
+
+    in_file.close();
