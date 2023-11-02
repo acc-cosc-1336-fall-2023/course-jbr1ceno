@@ -1,3 +1,21 @@
 100.59
 500.99
 55.50
+/usr/local/bin/python /workspaces/course-jbr1ceno/src/examples/f_files_exception/main.py
+100.59
+500.99
+55.50
+100.59
+500.99
+100.59
+500.99
+55.50
+clear
+100.59
+100.59
+100.59
+500.99
+55.50
+100.59
+500.99
+55.50

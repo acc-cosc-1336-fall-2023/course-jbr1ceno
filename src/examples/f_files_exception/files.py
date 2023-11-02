@@ -48,19 +48,19 @@ def write_names_to_file(file_name, file_mode):
     out_file.close()
 
 def read_from_file_while(file_name):
-    in_file = open(file_name)
+    in_file = open(file_name, 'r')
 
     line = in_file.readline()
 
     while(line != ''):
         print(line.rstrip('\n'))
-        line = in_file.readline
+        line = in_file.readline()
 
     in_file.close()
 
 def read_from_file_for(file_name):
     in_file = open(file_name, 'r')
-        
+
     for line in in_file:
         print(line.rstrip('\n'))
 
@@ -74,11 +74,11 @@ def write_sales_data(file_name, file_mode):
     while(user_choice.upper() == 'Y'):
         amount = input("Enter sales data: ")
         out_file.write(amount + '\n')
-        user_choice = input("Type y to continue")
+        user_choice = input("Type y to continue... ")
 
     out_file.close()
 
-def read_sales_data(file_name):
+def read_sales_data(file_name): #FIX THIS LATER
     in_file = open(file_name, 'r')
 
     total_sales = 0
@@ -86,6 +86,8 @@ def read_sales_data(file_name):
     for amount in in_file:
         print(f'{float(amount):.2f}')
         total_sales += float(amount)
-
+    
     print('-------')
     print(f'{total_sales:.2f}')
+
+    in_file.close()
