@@ -33,3 +33,44 @@ class Test_Config(unittest.TestCase):
         #self.assertEqual({'Widget2':20}, dictTest)
         self.assertEqual(1, len(dictTest))
         print(dictTest)
+
+
+    #HW 8
+    def test_find_intersection_set(self): #finds intersection of sets to display names of students who play both sports
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+
+        self.assertEqual(baseball.intersection(basketball), set(['Carmen','Alicia']))
+        print(baseball.intersection(basketball))
+    
+    def test_find_union_set(self): #finds union of sets to display names of students who played either baseball or basketball
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+
+        self.assertEqual(baseball.union(basketball), set(['Jodi', 'Carmen', 'Aida', 'Alicia', 'Eva', 'Sarah']))
+        print(baseball.union(basketball))
+
+    def test_find_difference_set_baseball_basketball(self): #finds difference of baseball and basketball sets to display the names of students who play baseball but not basket ball
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+
+        self.assertEqual(baseball.difference(basketball), set(['Jodi','Aida']))
+        print(baseball.difference(basketball))
+
+    def test_find_difference_set_basketball_baseball(self): #finds difference of basketball and baseball sets to display the names of students who play basketball but not base ball
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+
+        self.assertEqual(basketball.difference(baseball), set(['Eva','Sarah']))
+        self.assertEqual(baseball.difference(basketball), set(['Jodi','Aida']))
+
+        print(basketball.difference(baseball))
+        print(baseball.difference(basketball))
+
+    def test_find_symmetric_difference(self): #finds symmetric difference of the basketball and baseball sets to display the names of students who play one sport but not both
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+
+        self.assertEqual(baseball.symmetric_difference(basketball), set(['Jodi', 'Aida', 'Eva', 'Sarah']))
+
+        print(baseball.symmetric_difference(basketball))
