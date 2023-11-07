@@ -12,4 +12,6 @@ import files
 #files.write_sales_data('sales.txt', 'a')
 #files.read_sales_data('sales.txt') #FIX THIS LATER
 #files.write_field_data('field_data.txt', 'a')
-files.read_field_data('field_data.txt')
+#files.read_field_data('field_data.txt')
+#files.write_city_list_file('cities.txt')
+files.read_city_list_file('cities.txt')
