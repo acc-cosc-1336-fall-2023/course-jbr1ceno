@@ -25,3 +25,6 @@ class BankAccount:
 
     def __get_balance_from_db(self): #db means database
         self.__balance = random.randint(0, 10000)
+
+    def __str__(self):
+        return f'The balance is ${self.__balance}'
