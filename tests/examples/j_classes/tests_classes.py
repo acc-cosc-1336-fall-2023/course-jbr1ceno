@@ -1,6 +1,7 @@
 import unittest
 
 from src.examples.j_classes.bank_account import BankAccount
+from src.examples.j_classes.customer import Customer
 
 class Test_Config(unittest.TestCase):
 
@@ -68,3 +69,11 @@ class Test_Config(unittest.TestCase):
         self.assertGreaterEqual(account.get_balance(), 0)
         self.assertLessEqual(account.get_balance(), 10000)
         print(account.get_balance())
+
+    def test_get_account_from_Customer(self):
+        customer = Customer()
+        account = customer.get_account(0)
+        print(account)
+        self.assertGreaterEqual(account.get_balance(), 0)
+        self.assertLessEqual(account.get_balance(), 10000)
+

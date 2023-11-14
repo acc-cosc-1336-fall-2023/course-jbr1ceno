@@ -27,4 +27,4 @@ class BankAccount:
         self.__balance = random.randint(0, 10000)
 
     def __str__(self):
-        return f'The balance is ${self.__balance}'
+        return f'The balance is ${self.__balance:,.2f}'
