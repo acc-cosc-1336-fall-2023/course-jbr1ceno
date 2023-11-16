@@ -20,15 +20,15 @@ def run_menu():
     list_customers = []
 
     random.seed(int(time.time()))
-    customer = Customer()
+    customer = Customer(-1, -1)
     list_customers.append(customer)
 
     random.seed(int(time.time()))
-    customer = Customer()
+    customer = Customer(-1, -1)
     list_customers.append(customer)
 
     random.seed(int(time.time()))
-    customer = Customer()
+    customer = Customer(-1, -1)
     list_customers.append(customer)
 
 
