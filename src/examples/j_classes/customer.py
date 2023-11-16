@@ -10,3 +10,4 @@ class Customer:
 
     def get_account(self, index):
         return self.__list_accounts[index]
+    

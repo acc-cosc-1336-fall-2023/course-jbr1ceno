@@ -1,4 +1,4 @@
-import bank_account, atm, menu
+import src.examples.j_classes.menu
 
-
-menu.run_menu()
+def main():
+    src.examples.j_classes.menu.run_menu()
