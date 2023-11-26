@@ -3,10 +3,8 @@ from src.examples.j_classes.customer import Customer
 from src.examples.j_classes.atm import ATM
 
 def scan_card(customer_list_size):
-    random.seed(int(time.time()))
     choice = input('Enter something... ')#pause
     return random.randint(0, customer_list_size-1)
-
 
 def display_menu():
     print('COSC Bank')
@@ -23,11 +21,11 @@ def run_menu():
     customer = Customer(-1, -1)
     list_customers.append(customer)
 
-    random.seed(int(time.time()))
+
     customer = Customer(-1, -1)
     list_customers.append(customer)
 
-    random.seed(int(time.time()))
+
     customer = Customer(-1, -1)
     list_customers.append(customer)
 
@@ -37,11 +35,11 @@ def run_menu():
         customer_index = scan_card(len(list_customers))
 
         customer = list_customers[customer_index]
-        print(customer)
+
         account_index = int(input("Enter 1 for checking 2 for savings"))
 
-        account = customer.get_account(account_index)
-        print(account)
+        account = customer.get_account(account_index-1)
+
         atm = ATM(account)
 
         while(menu_choice != '4'):

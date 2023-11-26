@@ -16,15 +16,15 @@ class CustomerData:
     def get_customers(self):
         in_file = open(self.__file_name, 'r')
         checking_balance = 0
-        savings_balance = 0
+        saving_balance = 0
         list_customers = []
 
         for line in in_file:
             balances = line.rstrip('\n').split(',')
             checking_balance = int(balances[0])
-            savings_balance = int(balances[1])
+            saving_balance = int(balances[1])
 
-            customer = Customer(checking_balance, savings_balance)
+            customer = Customer(checking_balance, saving_balance)
             list_customers.append(customer)
 
         in_file.close()
